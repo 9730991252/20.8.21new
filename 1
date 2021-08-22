@@ -1,0 +1,50 @@
+{% extends 'shop/basic.html' %}
+
+{% block body %}
+{% load static %}
+<style>
+  #subcat
+{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+display: block;
+}   
+    
+</style>
+<div class="container">
+  <h6>welcome{{user}} </h6>
+
+<div class="row border" >
+  <div> <center>
+        <p>कॅटेगरी निवडा </p>
+          {% for category in categorys %}
+         
+   <button class="bcat" pid="{{category.id}}">{{category.name}}</button>
+  </center>
+  {% endfor %}
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-2">
+         <div  id="subcat">
+            </div>
+          </div>
+
+          <div class="col-10">
+                <div id="allprod">
+                  </div>
+                </div>
+              </div>
+               
+
+</div>
+
+
+{% endblock %}
+
+
+
